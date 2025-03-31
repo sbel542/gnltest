@@ -12,10 +12,11 @@ int main(void)
     }
 
     char *line = get_next_line(fd);
-    if (line)
+    while (line)
     {
         printf("Read line: %s", line);
         free(line);
+	line = get_next_line(fd);
     }
     else
         printf("get_next_line returned NULL\n");
