@@ -18,7 +18,7 @@ int main(void)
         free(line);
 	line = get_next_line(fd);
     }
-    else
+    if (!line)
         printf("get_next_line returned NULL\n");
 
     close(fd);
